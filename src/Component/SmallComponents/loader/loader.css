@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    background-color: #f2f2f2; /* Optional: Change background color */
+}
+
+.loader-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: orange; /* Orange background */
+}
+
+.loader {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader-logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+}
+
+.line {
+    position: absolute;
+    width: 4px;
+    height: 100px;
+    background: lightorange;
+    animation: fall 1s linear infinite;
+}
+
+.line1 {
+    left: 10%;
+    animation-delay: 0.1s;
+}
+
+.line2 {
+    left: 30%;
+    animation-delay: 0.3s;
+}
+
+.line3 {
+    left: 50%;
+    animation-delay: 0.5s;
+}
+
+.line4 {
+    left: 70%;
+    animation-delay: 0.7s;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fall {
+    0% {
+        top: -100px;
+    }
+    100% {
+        top: 100px;
+    }
+}
